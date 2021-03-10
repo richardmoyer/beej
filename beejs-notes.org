@@ -1,0 +1,24 @@
+#+TITLE: Beejs Notes
+
+* Chapter One
+
+C Preprocessor
+
+Anything that starts with an octothorpe is something the preprocessor operates on before the compiler, common /directives/ ~#include~ ~#define~
+
+one way function calls can be indicated is by a lack of squirelly braces after them
+
+sequences that start with ~%~ tell ~printf~ what to print. %s - string %f - float %d int etc
+
+#+begin_src C
+int main(void) {
+  int i = 2;
+  float f = 3.14;
+  char *s = "Hello, this is a string";
+
+  printf("%s i = %d and f = %f!\n", s, i, f);
+}
+#+end_src
+
+#+RESULTS:
+| Hello | this is a string i = 2 and f = 3.140000! |
