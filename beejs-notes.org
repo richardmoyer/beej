@@ -2,6 +2,9 @@
 
 * Chapter One
 
+*Compiling for this book*
+~gcc -std=c99 -pedantic foo.c~
+
 C Preprocessor
 
 Anything that starts with an octothorpe is something the preprocessor operates on before the compiler, common /directives/ ~#include~ ~#define~
@@ -9,6 +12,17 @@ Anything that starts with an octothorpe is something the preprocessor operates o
 one way function calls can be indicated is by a lack of squirelly braces after them
 
 sequences that start with ~%~ tell ~printf~ what to print. %s - string %f - float %d int etc
+
+
+
+* Chapter 3 Variables & Statements
+
+
+any characters in the range of 0-9, A-Z, a-z and underscores
+*Cannot start with*
+- a digit (0-9)
+- 2 underscores
+- an underscore followed by a capital A-Z
 
 #+begin_src C
 int main(void) {
@@ -22,3 +36,14 @@ int main(void) {
 
 #+RESULTS:
 | Hello | this is a string i = 2 and f = 3.140000! |
+
+** 3.2 Operators and Expressions
+
+~sizeof~ operator
+
+~%zu~ is format specifier for ~size_t~ (t is for type, pronounced "size tee")
+
+~printf("%zu", sizeof a); //prints 4 on my system~
+~printf("%zu", sizeof(2 + 7)); //prints 4 on my system~
+~printf("%zu", sizeof 3.14); //prints 8 on my system~
+
