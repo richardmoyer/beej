@@ -3,6 +3,7 @@
 * Chapter One
 
 *Compiling for this book*
+
 ~gcc -std=c99 -pedantic foo.c~
 
 C Preprocessor
@@ -16,7 +17,6 @@ sequences that start with ~%~ tell ~printf~ what to print. %s - string %f - floa
 
 
 * Chapter 3 Variables & Statements
-
 
 any characters in the range of 0-9, A-Z, a-z and underscores
 *Cannot start with*
@@ -44,6 +44,30 @@ int main(void) {
 ~%zu~ is format specifier for ~size_t~ (t is for type, pronounced "size tee")
 
 ~printf("%zu", sizeof a); //prints 4 on my system~
+
 ~printf("%zu", sizeof(2 + 7)); //prints 4 on my system~
+
 ~printf("%zu", sizeof 3.14); //prints 8 on my system~
 
+it is the size in bytes of th /type/ of the expression itself, thats why 2+7 is the same as size a, they are both an ~int~
+
+** 3.2.3 Ternary Operator
+
+an expression whose value depends on the result of a conditional embedded in it
+
+~y += x > 10? 17: 37;~
+
+is equivalent to this non expression:
+
+#+begin_src C
+if (x > 10)
+    y += 17;
+else
+    y += 37;
+#+end_src
+
+or an example that prints if a number stored in x is odd or even:
+
+~printf("The number %d is %s.\n", x, x % 2, == 0?"even": "odd")~
+
+** 3.2.4 Pre and Post Increment and Decrement
