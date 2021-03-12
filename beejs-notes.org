@@ -71,3 +71,60 @@ or an example that prints if a number stored in x is odd or even:
 ~printf("The number %d is %s.\n", x, x % 2, == 0?"even": "odd")~
 
 ** 3.2.4 Pre and Post Increment and Decrement
+
+pre increment:
+
+~++ i~ or ~--i~
+
+value is incremented or decremented /before/ the value is evaluated.
+
+#+begin_src C
+i = 10;
+j = 5 + ++i;
+
+printf("%d, %d\n", i, j); // Prints 11, 16
+#+end_src
+
+this technique is used frequently with array and pointer access and manipulation. gives a way to use the value in a variable, and also inc. or dec. the value before or after it is used
+
+*Comma Operator*
+
+with the comma operator the value of the comma expression is the value of the rightmost expression
+
+#+begin_src C
+x = 1, 2, 3;
+
+printf("x is %d\n", x); // prints 3, rightmost value
+#+end_src
+
+*Conditional Operators*
+
+#+begin_src C
+a == b; // Trueif a is equivalent to b
+a != b; // Trueif a is not equivalent to b
+a < b;  // Trueif a is less than b
+a > b;  // Trueif a is greater than b
+a <= b; // Trueif a is less than or equal to b
+a >= b; // Trueif a is greater than or equal to b
+#+end_src
+
+
+*Boolean Operator*
+
+~&&~ and, ~||~ or, ~!~ not.
+
+~!~ has higher precedence than other booleans, must use parenthesis
+
+#+begin_src C
+if (!(x < 12))
+  printf("x is not less than 12\n");
+
+// is equivalent to
+
+if (x > 12)
+  printf("x is not less than 12\n");
+#+end_src
+
+** 3.3 Flow Control
+
+~if, for, while, do-while~
