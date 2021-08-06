@@ -271,4 +271,40 @@ for (i = 0; i < 10; 1 ++;) {
 }
 #+end_src
 
+#+RESULTS:
+
 ~for (initialize the things; loop if this is true; do this after each loop)~
+
+
+#+begin_src C
+#include <stdio.h>
+
+    int main(void)
+        {
+            int goat_count;
+
+                printf("Enter a goat count: ");
+                scanf("%d", &goat_count); // read integer from keyboard
+
+                    switch (goat_count) {
+                        case 0:
+                            printf("You have no goats.\n");
+                            break;
+
+                        case 1:
+                            printf("You have a singular of goat.\n");
+                            break;
+
+                        case 2:
+                            printf("You have a brace of goats.\n");
+                            break;
+
+                        default:
+                            printf("You have a bona fide plethora of goats.\n");
+                            break;
+                        }
+            }
+#+end_src
+
+#+RESULTS:
+: Enter a goat count: You have a bona fide plethora of goats.
