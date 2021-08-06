@@ -333,3 +333,19 @@ int main(void)
 
 
 ~void~ is a  keyword thats used to indicate that the function accepts no arguments
+
+you can also return ~void~ to indicate that you dont return a value:
+
+#+begin_src C
+// this function takes no parameters and returns no value:
+
+void hello(void)
+    {
+    printf("Words\n");
+}
+
+int main(void)
+    {
+    hello();
+    }
+#+end_src
