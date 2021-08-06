@@ -308,3 +308,28 @@ for (i = 0; i < 10; 1 ++;) {
 
 #+RESULTS:
 : Enter a goat count: You have a bona fide plethora of goats.
+
+* Chapter 4: Functions
+
+Functions accept a variety of arguments and return a value. One important thing: the arguments and return value types are predeclared.
+
+#+begin_src C
+int plus_one(int n) // the "definition"
+    {
+    return n + 1;
+    }
+#+end_src
+
+#+begin_src C
+int main(void)
+    {
+    int i = 10, j;
+
+        j = plus_one(i); // the "call"
+
+        printf("i + 1 is %d\n", j);
+    }
+#+end_src
+
+
+~void~ is a  keyword thats used to indicate that the function accepts no arguments
